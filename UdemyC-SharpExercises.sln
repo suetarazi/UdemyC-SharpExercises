@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyC-SharpExercises", "UdemyC-SharpExercises\UdemyC-SharpExercises.csproj", "{C2C148B9-4FE3-4D30-BF08-EF0AED28147F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C148B9-4FE3-4D30-BF08-EF0AED28147F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C148B9-4FE3-4D30-BF08-EF0AED28147F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C148B9-4FE3-4D30-BF08-EF0AED28147F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C148B9-4FE3-4D30-BF08-EF0AED28147F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDFBFDE4-5F57-48CF-9754-652744DBD0D5}
+	EndGlobalSection
+EndGlobal
