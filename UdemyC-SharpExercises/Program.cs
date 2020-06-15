@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualBasic;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace UdemyC_SharpExercises
 {
@@ -15,37 +17,59 @@ namespace UdemyC_SharpExercises
 
         static void Main(string[] args)
         {
+
+            //Console.WriteLine("Please enter a name");
+            //string name = Console.ReadLine();
+            //string name2 = " ";
+
+            //if(name != null)
+            //{
+            //    Console.WriteLine($"{name} likes your post.");
+            //    Console.WriteLine("Please enter a name");
+            //    name2 = Console.ReadLine();
+
+            //    Console.WriteLine($"{name} and {name2} like your post");
+            //}
+
+            //int count = 0;
+
+            //while(name != null && name2 != null)
+            //{
+            //    Console.WriteLine("Please enter a name");
+            //    string moreNames = Console.ReadLine();
+            //    if (moreNames != null)
+            //    {
+            //        count = count + 1;
+            //        Console.WriteLine($"{name}, {name2} and {count} others like your post");
+            //    }
+            //    else
+            //    {
+            //        break;
+            //    }
+            //}
+            Program p = new Program();
+            p.Facebook();
+        }
+
+        public List<string> Facebook()
+        {
+            List<string> names = new List<string>();
+            Console.WriteLine("Please enter your name");
+            names.Add(Console.ReadLine());
+
+            Console.WriteLine($"{names[0]} likes your post");
             
-            Console.WriteLine("Please enter a name");
+            return names;
+
+        }
+
+        public string BackwardsName()
+        {
+            Console.WriteLine("Please enter your name");
             string name = Console.ReadLine();
-            string name2 = " ";
+            string[] arrName = new string[name.Length];
 
-            if(name != null)
-            {
-                Console.WriteLine($"{name} likes your post.");
-                Console.WriteLine("Please enter a name");
-                name2 = Console.ReadLine();
-
-                Console.WriteLine($"{name} and {name2} like your post");
-            }
-            
-            int count = 0;
-            
-            while(name != null && name2 != null)
-            {
-                Console.WriteLine("Please enter a name");
-                string moreNames = Console.ReadLine();
-                if (moreNames != null)
-                {
-                    count = count + 1;
-                    Console.WriteLine($"{name}, {name2} and {count} others like your post");
-                }
-                else
-                {
-                    break;
-                }
-            }
-
+            return Array.Reverse(arrName).ToString();
         }
     }
 }
