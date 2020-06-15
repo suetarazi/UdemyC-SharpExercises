@@ -48,7 +48,8 @@ namespace UdemyC_SharpExercises
             //    }
             //}
             Program p = new Program();
-            p.Facebook();
+            //p.Facebook();
+            p.BackwardsName();
         }
 
         public List<string> Facebook()
@@ -69,7 +70,13 @@ namespace UdemyC_SharpExercises
             string name = Console.ReadLine();
             string[] arrName = new string[name.Length];
 
-            return Array.Reverse(arrName).ToString();
+            Array.Reverse(arrName);
+
+            foreach(var letter in arrName)
+            {
+                Console.Write(letter + " ");
+            }
+            return name; 
         }
     }
 }
