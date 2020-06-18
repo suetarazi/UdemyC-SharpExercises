@@ -22,7 +22,8 @@ namespace UdemyC_SharpExercises
             //p.Facebook2();
             //p.BackwardsName();
             //p.FiveUniqueNumbers();
-            p.ListOfFive();
+            //p.ListOfFive();
+            p.CountVowels();
         }
 
 
@@ -174,5 +175,26 @@ namespace UdemyC_SharpExercises
             }
 
         }
+
+        public int CountVowels()
+        {
+            Console.WriteLine("Please enter a word");
+            string word = Console.ReadLine();
+
+            char[] splitWord = word.ToCharArray();
+            int vowel = 0;
+            
+            foreach (char c in splitWord)
+            {
+                if (c == 'a' || c == 'e' || c == 'i' || c== 'o' || c== 'u')
+                {
+                    vowel++;
+                }
+                           
+            }
+            Console.WriteLine($"The number of vowels in your word is {vowel}");
+            return vowel;
+        }
+
     }
 }
