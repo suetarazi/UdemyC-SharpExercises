@@ -15,5 +15,10 @@ namespace stopwatch
         {
 
         }
+
+        public int[] Foo(int x, params int[] y)
+        {
+            return y;
+        }
     }
 }
