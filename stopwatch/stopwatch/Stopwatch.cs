@@ -4,15 +4,36 @@ using System.Text;
 
 namespace stopwatch
 {
-    class Stopwatch
+    public class Stopwatch
     {
-        public TimeSpan Start()
+        private DateTime _start;
+        private DateTime _stop;
+        private bool _isRunning;
+
+        public void Start()
         {
-            
+            if(_isRunning == true)
+            {
+                Console.WriteLine("Timer is already started");
+            }
+            else
+            {
+                _start = DateTime.Now;
+                _isRunning = true;
+            }
         }
 
-        public TimeSpan Stop()
+        public void Stop()
         {
+            if(_isRunning == true)
+            {
+                _stop = DateTime.Now;
+                _isRunning = false;
+            }
+            else
+            {
+                Console.WriteLine("Timer is not running");
+            }
 
         }
 
