@@ -10,7 +10,7 @@ namespace stopwatch
         private DateTime _stop;
         private bool _isRunning;
 
-        public void Start()
+        public TimeSpan Start()
         {
             if(_isRunning == true)
             {
@@ -21,10 +21,12 @@ namespace stopwatch
                 _start = DateTime.Now;
                 _isRunning = true;
             }
+            return;
         }
 
-        public void Stop()
+        public TimeSpan Stop()
         {
+            
             if(_isRunning == true)
             {
                 _stop = DateTime.Now;
@@ -35,6 +37,7 @@ namespace stopwatch
                 Console.WriteLine("Timer is not running");
             }
 
+            return;
         }
 
         public int[] Foo(int x, params int[] y)

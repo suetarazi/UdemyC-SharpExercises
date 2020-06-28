@@ -16,13 +16,13 @@ namespace stopwatch
 
             
         }
-        public TimeSpan ElapsedTime(begin, end)
+        public TimeSpan ElapsedTime(TimeSpan begin, TimeSpan end)
         {
 
             TimeSpan duration = end - begin;
 
             Console.WriteLine(duration);
-            
+            return duration;
         }
     }
 }
