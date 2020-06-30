@@ -14,6 +14,21 @@ namespace SQL_OracleConnection
         {
             DbConnection connection = new DbConnection();
 
+            if (connection.IsValid)
+            {
+
+            }
+
+        }
+
+        public abstract OpenConnection()
+        {
+
+        }
+
+        public abstract CloseConnection()
+        {
+
         }
     }
 }
