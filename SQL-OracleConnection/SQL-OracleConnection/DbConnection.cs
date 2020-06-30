@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SQL_OracleConnection
 {
-    class DbConnection
+    public class DbConnection
     {
         public string ConnectionString {get; set;}
         public TimeSpan TimeOut { get; set; }
