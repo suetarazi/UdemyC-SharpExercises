@@ -1,4 +1,6 @@
-﻿using System;
+﻿using interface_exercise.Classes;
+using System;
+using System.Dynamic;
 
 namespace interface_exercise
 {
@@ -7,13 +9,24 @@ namespace interface_exercise
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Object workflow = new Object();
-            workflow.Run();
+            Workflow workflow = new Workflow();
+            workflow.Add(new Upload());
+            workflow.Add(new CallWebService());
+            workflow.Add(new ChangeDbStatus());
+            workflow.Add(new SendEmail());
+
+            var engine = new WorkflowEngine();
+            engine.Run(workflow);
+
+            Console.ReadLine();
         }
 
-        static void Run()
+        public void Run(IWorkflow workflow)
         {
-
+            foreach(IExecute task in workflow)
+            {
+                IExecute(task);
+            }
         }
     }
 }

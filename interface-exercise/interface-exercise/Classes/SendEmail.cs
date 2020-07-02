@@ -8,7 +8,7 @@ namespace interface_exercise.Classes
     {
         public void Execute()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Sending an email");
         }
     }
 }
